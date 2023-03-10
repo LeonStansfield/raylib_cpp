@@ -1,3 +1,6 @@
+#Raylib C++ project template
+Just a basic raylib Visual Studio 2022 project setup to use as a starting point using Premake 5 (as seen below).
+
 # Raylib Setup using Premake5
 This is a simplified set of instructions for how to setup a project using premake.
 
