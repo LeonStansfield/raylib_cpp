@@ -45,7 +45,7 @@ public:
 	void setColor(Color color) {
 		this->color = color;
 	}
-
+	
 	Color getWireColor() {
 		return this->wireColor;
 	}
