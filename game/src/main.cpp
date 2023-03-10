@@ -4,7 +4,6 @@
 #include <iostream>
 
 #include "raylib.h"
-#include "Body.h"
 
 const int screenWidth = 1600;
 const int screenHeight = 900;
@@ -16,9 +15,11 @@ private:
 	Color color;
 	Color wireColor;
 public:
-	Cube(Vector3 position, Vector3 scale) {
+	Cube(Vector3 position, Vector3 scale, Color color, Color wireColor) {
 		this->position = position;
 		this->scale = scale;
+		this->color = color;
+		this->wireColor = wireColor;
 	}
 
 	Vector3 getPosition() {
@@ -35,11 +36,6 @@ public:
 
 	void setScale(Vector3 scale) {
 		this->scale = scale;
-	}
-
-	Cube(Vector3 position, Vector3 scale, Color color, Color wireColor) : Body(position, scale) {
-		this->color = color;
-		this->wireColor = wireColor;
 	}
 
 	Color getColor() {
@@ -63,7 +59,7 @@ public:
 	}
 
 	void drawWire() {
-		DrawCubeWires(this->getPosition(), this->getScale().x, this->getScale().y, this->getScale().z, this->getColor());
+		DrawCubeWires(this->getPosition(), this->getScale().x, this->getScale().y, this->getScale().z, this->getWireColor());
 	}
 };
 
